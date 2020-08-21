@@ -1,0 +1,15 @@
+
+    <div>
+        <app-searchbar (newItemEvent)="inputChanged($event)"></app-searchbar>
+      
+        <button   class="button3" (click)="onClick(url)">Confirm</button>
+        <button class="button3" style="margin-left: 40px;" (click)="addToBookmarks(url)">Add to bookmarks</button>
+      </div>
+    
+      <div  class="relative" *ngIf="clicked">
+        <app-player   [url]="reloadingConfirm ? url : oldUrl"></app-player>
+      </div>
+      <div class="relative"  *ngIf="!clicked">
+        <img src="assets/image3.jpg" />
+      </div>
+      

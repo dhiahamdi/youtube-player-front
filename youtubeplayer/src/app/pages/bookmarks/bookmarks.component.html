@@ -1,0 +1,9 @@
+<ul class="heroes">
+    <div *ngFor="let video of videos">
+      <li>
+        <span class="badge">{{video.url}}</span>
+      </li>
+      <app-player [url]="video.url"></app-player>
+    </div>
+  </ul>
+  
